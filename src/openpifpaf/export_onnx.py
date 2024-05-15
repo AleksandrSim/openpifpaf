@@ -91,7 +91,7 @@ def session_start(onnx_path):
     so.graph_optimization_level = onnxruntime.GraphOptimizationLevel.ORT_ENABLE_ALL
 
     preferred_providers = [
-        'TensorrtExecutionProvider',  # First preference if available
+#        'TensorrtExecutionProvider',  # First preference if available
         'CUDAExecutionProvider',      # Fallback to CUDA if TensorRT is unavailable
         'CPUExecutionProvider'        # Fallback to CPU if no GPU options are available
     ]

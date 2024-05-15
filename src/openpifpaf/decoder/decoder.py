@@ -89,7 +89,8 @@ class Decoder:
             ort_session, input_name, output_names, _ = onnx
             image_batch = image_batch.cpu().numpy()
             heads = ort_session.run(output_names, {input_name: image_batch})
-            heads = apply(lambda x: torch.tensor(x), heads)
+            print(heads)
+#            heads = apply(lambda x: torch.tensor(x), heads)
 
         else:
             with torch.no_grad():
